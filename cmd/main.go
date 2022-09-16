@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"model_generator/internal/config"
+	"model_generator/internal/db/pgsql"
 	"os"
 )
 
@@ -49,5 +50,18 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(cnfg)
+	// fmt.Println(cnfg)
+
+	db, err := pgsql.New(&cnfg)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	entities, err := db.GetEntities()
+	if err != nil {
+		log.Fatal(err)
+	}
+	for _, entity := range entities {
+		fmt.Println(entity)
+	}
 }
