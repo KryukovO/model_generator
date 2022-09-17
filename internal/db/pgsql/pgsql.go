@@ -10,13 +10,13 @@ import (
 )
 
 // Структура для взаимодействия с БД
-type PgsqlDB struct {
+type pgsqlDB struct {
 	connectionStr string
 }
 
-// Конструктор PgsqlDB
-func New(conf *config.Config) (*PgsqlDB, error) {
-	pgsqlDB := &PgsqlDB{
+// Конструктор pgsqlDB
+func New(conf *config.Config) (*pgsqlDB, error) {
+	pgsqlDB := &pgsqlDB{
 		fmt.Sprintf(
 			"host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
 			conf.Host,
@@ -41,7 +41,7 @@ func New(conf *config.Config) (*PgsqlDB, error) {
 	return pgsqlDB, nil
 }
 
-func (pgsqlDB *PgsqlDB) GetEntities() ([]models.Entity, error) {
+func (pgsqlDB *pgsqlDB) GetEntities() ([]models.Entity, error) {
 	db, err := sql.Open("postgres", pgsqlDB.connectionStr)
 	if err != nil {
 		return nil, err

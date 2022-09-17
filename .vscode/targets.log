@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Sep 16 21:23:27 2022
+# Make data base, printed on Sat Sep 17 21:09:40 2022
 
 # Variables
 
@@ -29,7 +29,7 @@ CURDIR := /mnt/d/GoDir/model_generator
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"ru","availableLanguages":{"*":"ru"},"_languagePackId":"25fa6f3e61adfb2ba590c4cdbc3737bc.ru","_translationsConfigFile":"/home/oleg/.vscode-server/data/clp/25fa6f3e61adfb2ba590c4cdbc3737bc.ru/tcf.json","_cacheRoot":"/home/oleg/.vscode-server/data/clp/25fa6f3e61adfb2ba590c4cdbc3737bc.ru","_resolvedLanguagePackCoreLocation":"/home/oleg/.vscode-server/data/clp/25fa6f3e61adfb2ba590c4cdbc3737bc.ru/784b0177c56c607789f9638da7b6bf3230d47a8c","_corruptedFile":"/home/oleg/.vscode-server/data/clp/25fa6f3e61adfb2ba590c4cdbc3737bc.ru/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"ru","availableLanguages":{"*":"ru"},"_languagePackId":"82b10cd20de2ad093dc119a3bdaec56e.ru","_translationsConfigFile":"/home/oleg/.vscode-server/data/clp/82b10cd20de2ad093dc119a3bdaec56e.ru/tcf.json","_cacheRoot":"/home/oleg/.vscode-server/data/clp/82b10cd20de2ad093dc119a3bdaec56e.ru","_resolvedLanguagePackCoreLocation":"/home/oleg/.vscode-server/data/clp/82b10cd20de2ad093dc119a3bdaec56e.ru/74b1f979648cc44d385a2286793c226e611f59e7","_corruptedFile":"/home/oleg/.vscode-server/data/clp/82b10cd20de2ad093dc119a3bdaec56e.ru/corrupted.info","_languagePackSupport":true}
 # environment
 _ = /mnt/c/Users/apost/AppData/Local/Programs/Microsoft VS Code/bin/code
 # makefile (from 'Makefile', line 1)
@@ -40,6 +40,8 @@ GNUMAKEFLAGS :=
 XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# makefile (from 'Makefile', line 1)
+CONF := configs/default.json
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -49,7 +51,7 @@ GOPROXY = https://proxy.golang.org,direct
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/oleg/.vscode-server/bin/784b0177c56c607789f9638da7b6bf3230d47a8c/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.UbuntuonWindows_2004.2022.1.0_x64__79rhkp1fndgsc:/mnt/c/Program Files/Eclipse Foundation/jdk-8.0.302.8-hotspot/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Python38/Scripts/:/mnt/c/Python38/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/NetSarang/Xshell 7/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/apost/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/apost/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/apost/.dotnet/tools:/mnt/c/SparkBin/apache-maven-3.6.3/bin:/mnt/c/SparkBin/spark-2.4.5-bin-hadoop2.7/bin:/mnt/c/Users/apost/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/apost/AppData/Roaming/npm:/mnt/c/Users/apost/.dotnet/tools:/snap/bin:/home/oleg/go/bin:/home/oleg/go/bin:/usr/local/go/bin
+PATH = /home/oleg/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.UbuntuonWindows_2004.2022.1.0_x64__79rhkp1fndgsc:/mnt/c/Program Files/Eclipse Foundation/jdk-8.0.302.8-hotspot/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Python38/Scripts/:/mnt/c/Python38/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/NetSarang/Xshell 7/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/apost/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/apost/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/apost/.dotnet/tools:/mnt/c/SparkBin/apache-maven-3.6.3/bin:/mnt/c/SparkBin/spark-2.4.5-bin-hadoop2.7/bin:/mnt/c/Users/apost/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/apost/AppData/Roaming/npm:/mnt/c/Users/apost/.dotnet/tools:/snap/bin:/home/oleg/go/bin:/home/oleg/go/bin:/usr/local/go/bin
 # environment
 GOPATH = /home/oleg/go
 # environment
@@ -63,7 +65,7 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # environment
 PWD = /mnt/d/GoDir/model_generator
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-38be0c6d-b4b3-4374-988e-422374ae7939.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-937bd961-d01d-43d5-92ec-ff6c4a02723d.sock
 # environment
 GOMODCACHE = /home/oleg/go/pkg/mod
 # environment
@@ -134,14 +136,14 @@ SUFFIXES :=
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # default
 .RECIPEPREFIX := 
-# environment
-LANG = C
+# makefile (from 'Makefile', line 2)
+LANG := go
 # environment
 TERM = xterm-256color
 # environment
 WSL_DISTRO_NAME = Ubuntu
 # variable set hash-table stats:
-# Load=65/1024=6%, Rehash=0, Collisions=4/90=4%
+# Load=66/1024=6%, Rehash=0, Collisions=5/92=5%
 
 # Pattern-specific Variable Values
 
@@ -149,9 +151,9 @@ WSL_DISTRO_NAME = Ubuntu
 
 # Directories
 
-# . (device 15, inode 72620543991373608): 12 files, no impossibilities.
+# . (device 15, inode 72620543991373608): 13 files, no impossibilities.
 
-# 12 files, no impossibilities in 1 directories.
+# 13 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -166,13 +168,10 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
- 
-make: *** No rule to make target 'all'.  Stop.
-
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-01 21:08:08.5075963
+#  Last modified 2022-09-16 21:53:15.4820811
 #  File has been updated.
 #  Successfully updated.
 
@@ -186,8 +185,8 @@ run:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 2):
-	go run cmd/main.go
+#  recipe to execute (from 'Makefile', line 5):
+	go run cmd/main.go -config $(CONF) -lang $(LANG)
 
 # files hash-table stats:
 # Load=5/1024=0%, Rehash=0, Collisions=0/15=0%
@@ -197,12 +196,14 @@ run:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 18 / storage = 139 B / avg = 7 B
-# current buf: size = 8162 B / used = 139 B / count = 18 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 19 / storage = 146 B / avg = 7 B
+# current buf: size = 8162 B / used = 146 B / count = 19 / avg = 7 B
 
-# strcache performance: lookups = 23 / hit rate = 21%
+# strcache performance: lookups = 24 / hit rate = 20%
 # hash-table stats:
-# Load=18/8192=0%, Rehash=0, Collisions=1/23=4%
-# Finished Make data base on Fri Sep 16 21:23:27 2022
+# Load=19/8192=0%, Rehash=0, Collisions=1/24=4%
+# Finished Make data base on Sat Sep 17 21:09:40 2022
 
  
+make: *** No rule to make target 'all'.  Stop.
+
