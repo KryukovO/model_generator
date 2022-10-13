@@ -6,19 +6,18 @@ import (
 )
 
 type mGen struct {
-	database *db.Database
-	language *language.Language
+	database db.Database
+	language language.Language
 }
 
-func New(database *db.Database, language *language.Language) *mGen {
+func New(database db.Database, language language.Language) *mGen {
 	return &mGen{database: database, language: language}
 }
 
 func (generator *mGen) StartGenFiles(path string) error {
-	entities, err := (*generator.database).GetEntities()
+	entities, err := generator.database.GetEntities()
 	if err != nil {
 		return err
 	}
-	err = (*generator.language).GenFiles(entities, path)
-	return err
+	return generator.language.GenFiles(entities, path)
 }

@@ -1,5 +1,5 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/mnt/d/GoDir/model_generator'
-go run cmd/main.go -config configs/default.json -lang go
+go run cmd/main.go -config configs/default.json -lang go -o ./build/models/
 make: Leaving directory '/mnt/d/GoDir/model_generator'
  

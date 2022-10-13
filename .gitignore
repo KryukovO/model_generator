@@ -17,6 +17,9 @@
 # Directory for execution results
 results/*
 
+# Directory for build results
+build/*
+
 # .vscode directory
 .vscode/*
 !.vscode/settings.json

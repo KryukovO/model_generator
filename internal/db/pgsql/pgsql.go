@@ -9,6 +9,26 @@ import (
 	_ "github.com/lib/pq"
 )
 
+const (
+	entityQuery = `SELECT 
+						ent.oid AS entity_oid,
+						nsp.nspname AS schema_name,
+						ent.relname AS entity_name,
+						COALESCE(obj_description(ent.oid), format('%s.%s', nsp.nspname, ent.relname)) AS "comment"
+					FROM pg_class ent
+					JOIN pg_namespace nsp ON nsp.oid = ent.relnamespace
+					WHERE (ent.relkind = 'r' OR ent.relkind = 'v')
+						AND nsp.nspname <> ALL (ARRAY['pg_catalog'::text, 'information_schema'::text]) AND nsp.nspname NOT LIKE 'pg_toast%';`
+
+	propertyQuery = `SELECT 
+						att.attname AS column_name,
+						format_type(att.atttypid, NULL)::information_schema.character_data AS data_type,
+						COALESCE(d.description, att.attname::TEXT) AS "comment"
+					FROM pg_attribute att
+					LEFT JOIN pg_description d ON d.objsubid = att.attnum AND d.objoid = att.attrelid
+					WHERE att.attrelid = $1 AND att.attnum > 0 AND NOT att.attisdropped;`
+)
+
 // Структура для взаимодействия с БД
 type pgsqlDB struct {
 	connectionStr string
@@ -41,30 +61,13 @@ func New(conf *config.Config) (*pgsqlDB, error) {
 	return pgsqlDB, nil
 }
 
+// Получение списка сущностей (таблиц и представлений) базы данных с описанием их полей
 func (pgsqlDB *pgsqlDB) GetEntities() ([]models.Entity, error) {
 	db, err := sql.Open("postgres", pgsqlDB.connectionStr)
 	if err != nil {
 		return nil, err
 	}
 	defer db.Close()
-
-	entityQuery := `SELECT 
-						ent.oid AS entity_oid,
-						nsp.nspname AS schema_name,
-						ent.relname AS entity_name,
-						COALESCE(obj_description(ent.oid), format('%s.%s', nsp.nspname, ent.relname)) AS "comment"
-					FROM pg_class ent
-					JOIN pg_namespace nsp ON nsp.oid = ent.relnamespace
-					WHERE (ent.relkind = 'r' OR ent.relkind = 'v')
-						AND nsp.nspname <> ALL (ARRAY['pg_catalog'::text, 'information_schema'::text]) AND nsp.nspname NOT LIKE 'pg_toast%';`
-
-	propertyQuery := `SELECT 
-						att.attname AS column_name,
-						format_type(att.atttypid, NULL)::information_schema.character_data AS data_type,
-						COALESCE(d.description, att.attname::TEXT) AS "comment"
-					FROM pg_attribute att
-					LEFT JOIN pg_description d ON d.objsubid = att.attnum AND d.objoid = att.attrelid
-					WHERE att.attrelid = $1 AND att.attnum > 0 AND NOT att.attisdropped;`
 
 	entities := make([]models.Entity, 0)
 	entityRows, err := db.Query(entityQuery)
